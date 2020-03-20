@@ -94,7 +94,7 @@ func (msg *KriMessage) FindPassport() (number, series string) {
 }
 
 func (msg *KriMessage) FindSnils() (snils string) {
-	for _, snils := range msg.Documents.Passport {
+	for _, snils := range msg.Documents.Snils {
 		if snils.Validation && !snils.Deleted {
 			return snils.Value
 		}
